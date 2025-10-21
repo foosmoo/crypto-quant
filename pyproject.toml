@@ -1,0 +1,85 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cached-binance-client"
+version = "0.1.0"
+description = "A cached Binance price data retriever with quant analysis tools"
+authors = [
+    {name = "foosmoo", email = "foosmoo@gmail.com"}
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+keywords = [
+    "binance", 
+    "crypto", 
+    "trading", 
+    "quantitative-analysis",
+    "machine-learning",
+    "bitcoin"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+
+dependencies = [
+    "python-binance>=1.0.19",
+    "pandas>=1.5.0",
+    "python-dotenv>=1.0.0",
+    "sqlalchemy>=2.0.0",
+    "numpy>=1.21.0",
+    "matplotlib>=3.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+    "pre-commit>=3.0.0",
+]
+analysis = [
+    "seaborn>=0.12.0",
+    "scikit-learn>=1.2.0",
+    "jupyter>=1.0.0",
+]
+ml = [
+    "scikit-learn>=1.2.0",
+    "tensorflow>=2.12.0",
+    "torch>=2.0.0",
+    "xgboost>=1.7.0",
+]
+
+# For src/ layout, we need to specify package discovery
+[tool.setuptools]
+packages = {find = {where = ["src"]}}
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[project.scripts]
+cached-binance = "cached_binance_client:main"
+quant-analysis = "basic_quant_analysis:main"
+binance-client = "simple_binance_client:main"
+binance-analysis = "basic_analysis:main"
+
+[project.urls]
+"Homepage" = "https://github.com/foosmoo/cached-binance-client"
+"Documentation" = "https://github.com/foosmoo/cached-binance-client"
+"Repository" = "https://github.com/foosmoo/cached-binance-client"
+
