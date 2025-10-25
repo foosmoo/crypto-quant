@@ -1,4 +1,4 @@
-# A Caching Price-Data Retrival Client & Quant Analysis Tools
+# A Caching Price-Data Retrival Client & Quant Analysis Tool
 
 Quantitative analysis platform built in Python, designed for crypto price data. Platform includes strategy development an ML model training, leveraging Python Torch.
 
@@ -24,6 +24,12 @@ source venv/bin/activate
 
 ```bash
 make install
+```
+
+> Create **.env** file with your api keys. Refer to `.env.example` as a template
+```bash
+BINANCE_API_KEY="your_api_key"
+BINANCE_API_SECRET="your_api_secret"
 ```
 
 ### Intallation via pip
