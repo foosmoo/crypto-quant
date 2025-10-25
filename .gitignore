@@ -208,7 +208,7 @@ __marimo__/
 
 # App generated temp pathnames
 out/
-db/
+db/*.db
 
 # Keys
 *key*
