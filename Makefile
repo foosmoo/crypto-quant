@@ -30,5 +30,4 @@ install:
 	mkdir -p out db
 
 clean:
-	rm -rf out src/*.egg-info
-	mkdir -p out
+	rm -rf out/*.{png,csv} src/*.egg-info

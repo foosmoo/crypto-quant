@@ -207,7 +207,8 @@ marimo/_lsp/
 __marimo__/
 
 # App generated temp pathnames
-out/
+out/**
+!out/README.txt
 db/*.db
 
 # Keys
