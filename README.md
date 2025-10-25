@@ -1,4 +1,4 @@
-# cypto-quant - A Caching Price-Data Retrival Client & Quant Analysis Tools
+# A Caching Price-Data Retrival Client & Quant Analysis Tools
 
 Quantitative analysis platform built in Python, designed for crypto price data. Platform includes strategy development an ML model training, leveraging Python Torch.
 
@@ -20,28 +20,29 @@ make venv
 source venv/bin/activate
 ```
 
-> ⚠️  If you're not running make install, then be sure to create the `out` and `db` directories.
+> ⚠️  If you're not running make install, then be sure to the `out` and `db` directories exist.
 
 ```bash
 make install
 ```
 
 ### Intallation via pip
+#### Basic client
 ```bash
 pip install cached-binance-client
 ```
 
-### With Analysis Tools
+#### With Analysis Tools
 ```bash
 pip install "cached-binance-client[analysis]"
 ```
 
-### With ML Dependencies
+#### With ML Dependencies
 ```bash
 pip install "cached-binance-client[ml]"
 ```
 
-### Development Installation
+#### Development Installation
 ```bash
 git clone https://github.com/foosmoo/cached-binance-client
 cd cached-binance-client
