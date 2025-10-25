@@ -13,13 +13,20 @@ Quantitative analysis platform built in Python, designed for crypto price data. 
 ## Installation
 
 ### Basic Installation
-If using venv, then run `make venv` first and source the `activate` file. Then run:
+
+> ℹ️  if you're wanting to use venv, then run the following
+```bash
+make venv
+source venv/bin/activate
+```
+
+> ⚠️  If you're not running make install, then be sure to create the `out` and `db` directories.
 
 ```bash
 make install
 ```
 
-Intallation via pip:
+### Intallation via pip
 ```bash
 pip install cached-binance-client
 ```
