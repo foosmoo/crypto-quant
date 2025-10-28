@@ -14,22 +14,19 @@ Quantitative analysis platform built in Python, designed for crypto price data. 
 
 ### Basic Installation
 
-> ℹ️  if you're wanting to use venv, then run the following
+> [!NOTE]
+> If you're wanting to use venv, then run the following:
+
 ```bash
 make venv
 source venv/bin/activate
 ```
 
-> ⚠️  If you're not running make install, then be sure to the `out` and `db` directories exist.
+> [!NOTE]
+> If you're not running make install, then be sure to the `out` and `db` directories exist.
 
 ```bash
 make install
-```
-
-> Create **.env** file with your api keys. Refer to `.env.example` as a template
-```bash
-BINANCE_API_KEY="your_api_key"
-BINANCE_API_SECRET="your_api_secret"
 ```
 
 ### Intallation via pip
@@ -43,8 +40,25 @@ BINANCE_API_SECRET="your_api_secret"
 
 ## Configuration
 
-1. Copy .env.example to .env
-2. Update .env with relevant Binance API keys
+
+> [!CAUTION]
+> Do not check in your .env file or any code with keys.<br/>
+> This should be prevented by `.gitignore` and CodeQL, which'll fail the commit if it detects secrets
+
+>[!TIP]
+> Another layer of protection can be added at the time an API key is created by only allowing the key to
+> have Read Only permissions and also by whitelisting access to the Binance API with your the key so that
+> only your own specific IPs are accepted.
+
+Create an **.env** file with your api keys. Refer to `.env.example` as a template
+
+1. `bash $ cat .env.example > .env`
+2. Update `.env` with relevant Binance API keys (see recommendation above re permissions and whitelisting)
+
+```bash
+BINANCE_API_KEY="your_api_key"
+BINANCE_API_SECRET="your_api_secret"
+```
 
 ## Quick Start Guide
 
