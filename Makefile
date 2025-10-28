@@ -22,11 +22,14 @@ venv:
 	@echo run this: 'source venv/bin/activate'
 	@echo and be sure to run: 'make install'
 
+install-dev: install
+	pip install -e .[dev]
+
 install:
 	python3 -m pip install --upgrade pip
 	pip install -e .
-	pip uninstall urllib3
-	pip install 'urllib3<2.0' # for older mac, mac air m1/m2 
+	#pip uninstall urllib3
+	#pip install 'urllib3<2.0' # for older mac, mac air m1/m2 
 	mkdir -p out db
 
 clean:

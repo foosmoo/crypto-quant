@@ -6,6 +6,14 @@ Enhanced version with SQLite database caching to avoid repeated API calls.
 Perfect for quant analysis and ML model development.
 """
 
+# Binance API is still using deprecated legacy websockets. Surpress.
+import warnings
+warnings.filterwarnings(
+    action="ignore",
+    category=Warning,
+    message=".*websockets.*deprecated.*"
+)
+
 import os
 import pandas as pd
 import sqlite3

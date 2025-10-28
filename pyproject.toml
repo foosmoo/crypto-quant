@@ -7,7 +7,7 @@ name = "cached-binance-client"
 version = "0.1.0"
 description = "A cached Binance price data retriever with quant analysis tools"
 authors = [
-    {name = "foosmoo", email = "foosmoo@gmail.com"}
+    {name = "foosmoo", email = "x@y.com"}
 ]
 readme = "README.md"
 license = {text = "MIT"}
