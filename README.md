@@ -33,27 +33,13 @@ BINANCE_API_SECRET="your_api_secret"
 ```
 
 ### Intallation via pip
-#### Basic client
-```bash
-pip install cached-binance-client
-```
 
-#### With Analysis Tools
-```bash
-pip install "cached-binance-client[analysis]"
-```
-
-#### With ML Dependencies
-```bash
-pip install "cached-binance-client[ml]"
-```
-
-#### Development Installation
-```bash
-git clone https://github.com/foosmoo/cached-binance-client
-cd cached-binance-client
-pip install -e ".[dev,analysis]"
-```
+|Regime|How to do it|What it does|
+|---|---|---|
+|Basic|`pip install -e .`|Installs basic client dependencies for the runtime|
+|Analysis|`pip install -e .[analysis]`|Installs required libraries for analysis|
+|ML|`pip install -e .[ml]`|Installs required libraries for machine learning|
+|Dev|`pip install -e .[dev,ml,analysis]`|Installs testing & linting libraries as well as the ML and Analysis libs|
 
 ## Configuration
 
