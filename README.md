@@ -12,9 +12,8 @@ Quantitative analysis platform built in Python, designed for crypto price data. 
 
 ## Installation
 
-### Basic Installation
+### Basic Installation via make
 
-> [!NOTE]
 > If you're wanting to use venv, then run the following:
 
 ```bash
@@ -22,11 +21,10 @@ make venv
 source venv/bin/activate
 ```
 
-> [!NOTE]
-> If you're not running make install, then be sure to the `out` and `db` directories exist.
+> The `install` target is a dependency of `install-dev`. Chose the former if you don't want the dev, analytics & ml dependencies.
 
 ```bash
-make install
+make install-dev
 ```
 
 ### Intallation via pip
@@ -36,10 +34,9 @@ make install
 |Basic|`pip install -e .`|Installs basic client dependencies for the runtime|
 |Analysis|`pip install -e .[analysis]`|Installs required libraries for analysis|
 |ML|`pip install -e .[ml]`|Installs required libraries for machine learning|
-|Dev|`pip install -e .[dev,ml,analysis]`|Installs testing & linting libraries as well as the ML and Analysis libs|
+|Dev|`pip install -e .[dev,ml,analysis]`|Installs testing & linting libraries as well as the ML and Analytics libs|
 
 ## Configuration
-
 
 > [!CAUTION]
 > Do not check in your .env file or any code with keys.<br/>
@@ -47,8 +44,8 @@ make install
 
 >[!TIP]
 > Another layer of protection can be added at the time an API key is created by only allowing the key to
-> have Read Only permissions and also by whitelisting access to the Binance API with your the key so that
-> only your own specific IPs are accepted.
+> have Read Only permissions and also by whitelisting access to the Binance API so that your key is rejected
+> unless the API requests originate from your own specific IPs.
 
 Create an **.env** file with your api keys. Refer to `.env.example` as a template
 
@@ -86,3 +83,4 @@ cached-binance --stats
 ```bash
 binance-client --help
 ```
+

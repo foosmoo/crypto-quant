@@ -1,4 +1,7 @@
 
+##
+# Aliases
+#
 get-btc-prices:
 	cached-binance --symbol BTCUSDT --days 90
 
@@ -16,6 +19,20 @@ clear-cache:
 
 stats:
 	cached-binance --stats
+
+##
+# testing
+#
+test:
+	pytest --cov=src
+
+flake:
+	flake8 --max-line-length=120 src
+
+black:
+	black --check src
+
+# Config and installation
 
 venv:
 	python3 -m venv venv
