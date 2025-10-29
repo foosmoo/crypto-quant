@@ -3,9 +3,9 @@ requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "cached-binance-client"
-version = "0.1.0"
-description = "A cached Binance price data retriever with quant analysis tools"
+name = "crypto-quant"
+version = "0.2.0"
+description = "A cached Binance price data retriever with quant analysis tooling"
 authors = [
     {name = "foosmoo", email = "x@y.com"}
 ]
@@ -75,8 +75,13 @@ packages = {find = {where = ["src"]}}
 [project.scripts]
 cached-binance = "cached_binance_client:main"
 quant-analysis = "basic_quant_analysis:main"
-binance-client = "simple_binance_client:main"
-binance-analysis = "basic_analysis:main"
+simple-binance-client = "simple_binance_client:main"
+ml-train = "ml_model:main"
+backtest-run = "backtester:main"
+# exmple/demo backtesting
+basic-backtest = "basic_backtest:main"
+basic-ml-backtest = "basic_ml_backtest:main"
+backtest-all = "backtest_all_strategies:main"
 
 [project.urls]
 "Homepage" = "https://github.com/foosmoo/cached-binance-client"

@@ -20,8 +20,14 @@ clear-cache:
 stats:
 	cached-binance --stats
 
+backtest:
+	backtest-run
+
+backtest-demo:
+	python src/basic_backtest.py
+
 ##
-# testing
+# functional testing
 #
 test:
 	pytest --cov=src
@@ -50,4 +56,4 @@ install:
 	mkdir -p out db
 
 clean:
-	rm -rf out/*.{png,csv} src/*.egg-info
+	rm -rf out/*.{png,csv,json} src/*.egg-info
