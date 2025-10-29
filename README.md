@@ -59,28 +59,11 @@ BINANCE_API_SECRET="your_api_secret"
 
 ## Quick Start Guide
 
-### Get cached BTC data
-```bash 
-cached-binance --symbol BTCUSDT --days 90
-```
-
-### Run quant analysis
-```bash 
-quant-analysis
-```
-
-### Get fresh data (ignore cache)
-```bash 
-cached-binance --symbol ETHUSDT --days 30 --no-cache
-```
-
-### View cache statistics
-```bash 
-cached-binance --stats
-```
-
-### Client Help
-```bash
-binance-client --help
-```
+|Action|Command|What it does|
+|:--- |:---|:---|
+|<nobr>Query cache</nobr>| <nobr>`cached-binance --symbol BTCUSDT --days 90`</nobr> | Retreives the last 90 days of pricing data of the BTCUSDT pair. Retrieves data from Binance if no data found in the cache |
+|<nobr>Basic quant analysis</nobr>| `quant-analysis` | Runs the basic quant test scenario using 1hr intervals over the last 30 days for the BTCUSDT pair |
+|<nobr>Data refresh</nobr>|<nobr>`cached-binance --symbol ETHUSDT --days 30 --no-cache`</nobr>|Refresh the last 30 days of data in the cache for ETHUSDT and answer the result|
+|<nobr>Cache stats</nobr>|`cached-binance --stats`|View cache statistics|
+|<nobr>Client help</nobr>|`binance-client --help`|Output command line arguments and options supported by the caching client|
 
